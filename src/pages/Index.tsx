@@ -10,7 +10,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'skills', 'services', 'projects', 'experience', 'certifications', 'contact'];
+      const sections = ['home', 'about', 'skills', 'services', 'projects', 'experience', 'achievements', 'certifications', 'contact'];
       const scrollPosition = window.scrollY;
 
       for (const section of sections) {
@@ -38,6 +38,8 @@ const Index = () => {
     { href: '#services', label: 'Services' },
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
+    { href: '#achievements', label: 'Achievements' },
+    { href: '#certifications', label: 'Certifications' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -117,6 +119,11 @@ const Index = () => {
     },
   ];
 
+  const achievements = [
+    'Champion Milestone in GoogleCloud Arcade (Jul 2024-Dec 2024)',
+    'Chess Winners Shruthi\'25 (Annual College Event)',
+  ];
+
   const certifications = [
     'MongoDB Associate Developer Python',
     'Salesforce Associate Developer',
@@ -125,18 +132,13 @@ const Index = () => {
     'Programming in Java (Infosys Springboard)',
   ];
 
-  const achievements = [
-    'Champion Milestone in GoogleCloud Arcade (Jul 2024-Dec 2024)',
-    'Chess Winners Shruthi\'25 (Annual College Event)',
-  ];
-
   return (
-    <div className="min-h-screen bg-navy-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass-card">
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-lg bg-slate-900/80 border-b border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="text-2xl font-bold gradient-text">KK</div>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">KK</div>
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -168,7 +170,7 @@ const Index = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden glass-card mt-2 mx-4 rounded-lg">
+          <div className="md:hidden backdrop-blur-lg bg-slate-900/90 mt-2 mx-4 rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <a
@@ -186,10 +188,10 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center hero-gradient">
+      <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="floating-element">
-            <div className="w-48 h-48 mx-auto mb-8 rounded-full glow-effect overflow-hidden border-4 border-blue-400/30">
+          <div className="mb-8">
+            <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-2xl shadow-blue-500/20">
               <img 
                 src="https://i.postimg.cc/6qW72NG3/Screenshot-2023-0205-130522.jpg" 
                 alt="Karthik Kemidi" 
@@ -198,28 +200,13 @@ const Index = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 typewriter font-poppins">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Karthik Kemidi
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 gradient-text font-medium">
+          <p className="text-xl md:text-2xl mb-12 text-blue-300 font-medium">
             AI/ML Engineer | Web Developer | Problem Solver
           </p>
-
-          {/* Achievements Section */}
-          <div className="mb-8">
-            <div className="flex justify-center items-center mb-4">
-              <Award className="w-6 h-6 text-cyan-400 mr-2" />
-              <h3 className="text-lg font-semibold text-blue-400">Recent Achievements</h3>
-            </div>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="glass-card px-4 py-2 rounded-full">
-                  <span className="text-sm text-cyan-300">🏆 {achievement}</span>
-                </div>
-              ))}
-            </div>
-          </div>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             I am Karthik Kemidi, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Chaitanya Bharathi Institute of Technology, Hyderabad. I am passionate about building intelligent systems and web applications that solve real-world problems. With hands-on experience in machine learning, web development, and multiple virtual internships, I aim to innovate and contribute to impactful tech solutions.
@@ -232,13 +219,13 @@ const Index = () => {
                 GitHub
               </a>
             </Button>
-            <Button asChild variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-navy-900 transition-all duration-300 hover:scale-105">
+            <Button asChild variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105">
               <a href="https://www.linkedin.com/in/karthik-kemidi-b4924a25a/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5 mr-2" />
                 LinkedIn
               </a>
             </Button>
-            <Button asChild variant="secondary" className="transition-all duration-300 hover:scale-105">
+            <Button asChild variant="secondary" className="bg-slate-700 hover:bg-slate-600 transition-all duration-300 hover:scale-105">
               <a href="#contact">
                 <Mail className="w-5 h-5 mr-2" />
                 Contact Me
@@ -249,12 +236,12 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-20 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">About Me</h2>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <Card className="glass-card">
+            <Card className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Education</h3>
                 <div className="space-y-6">
@@ -272,7 +259,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card">
+            <Card className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Coursework</h3>
                 <div className="flex flex-wrap gap-2">
@@ -289,13 +276,13 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-navy-950/50">
+      <section id="skills" className="py-20 bg-gradient-to-br from-blue-900/50 to-indigo-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Skills</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Skills</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skills.map((skillGroup, index) => (
-              <Card key={index} className="glass-card hover:scale-105 transition-all duration-300 group">
+              <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20 hover:scale-105 transition-all duration-300 group">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-blue-400 group-hover:text-cyan-400 transition-colors">
                     {skillGroup.category}
@@ -315,13 +302,13 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20">
+      <section id="services" className="py-20 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Services</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="glass-card hover:scale-105 transition-all duration-300 group">
+              <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20 hover:scale-105 transition-all duration-300 group">
                 <CardContent className="p-8 text-center">
                   <div className="text-blue-400 group-hover:text-cyan-400 transition-colors mb-4 flex justify-center">
                     {service.icon}
@@ -336,13 +323,13 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-navy-950/50">
+      <section id="projects" className="py-20 bg-gradient-to-br from-blue-900/50 to-indigo-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Projects</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="glass-card hover:scale-105 transition-all duration-300 group">
+              <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20 hover:scale-105 transition-all duration-300 group">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-3 group-hover:text-blue-400 transition-colors">
                     {project.title}
@@ -358,7 +345,7 @@ const Index = () => {
                   </div>
                   
                   {project.github !== '#' && (
-                    <Button asChild size="sm" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-navy-900">
+                    <Button asChild size="sm" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900">
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         View Code
@@ -373,9 +360,9 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20">
+      <section id="experience" className="py-20 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Experience</h2>
           
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-400 to-cyan-400"></div>
@@ -383,13 +370,13 @@ const Index = () => {
             <div className="space-y-12">
               {experience.map((exp, index) => (
                 <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <Card className={`glass-card w-full md:w-96 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'} hover:scale-105 transition-all duration-300`}>
+                  <Card className={`bg-slate-800/50 backdrop-blur-lg border-blue-500/20 w-full md:w-96 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'} hover:scale-105 transition-all duration-300`}>
                     <CardContent className="p-6">
                       <div className="text-cyan-400 text-sm font-medium mb-2">{exp.year}</div>
                       <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
                       <h4 className="text-blue-400 font-semibold mb-3">{exp.company}</h4>
                       <p className="text-gray-300 text-sm mb-4">{exp.description}</p>
-                      <Button asChild size="sm" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-navy-900">
+                      <Button asChild size="sm" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900">
                         <a href={exp.link} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-4 h-4 mr-2" />
                           View Certificate
@@ -404,17 +391,39 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-navy-950/50">
+      {/* Achievements Section */}
+      <section id="achievements" className="py-20 bg-gradient-to-br from-blue-900/50 to-indigo-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Certifications</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Achievements</h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {achievements.map((achievement, index) => (
+              <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20 hover:scale-105 transition-all duration-300 group">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Award className="w-6 h-6 text-slate-900" />
+                  </div>
+                  <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
+                    {achievement}
+                  </h3>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20 bg-slate-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Certifications</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <Card key={index} className="glass-card hover:scale-105 transition-all duration-300 group">
+              <Card key={index} className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20 hover:scale-105 transition-all duration-300 group">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-navy-900 font-bold text-xl">✓</span>
+                    <span className="text-slate-900 font-bold text-xl">✓</span>
                   </div>
                   <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
                     {cert}
@@ -427,12 +436,12 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-20 bg-gradient-to-br from-blue-900/50 to-indigo-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Get In Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Get In Touch</h2>
           
           <div className="grid md:grid-cols-2 gap-12">
-            <Card className="glass-card">
+            <Card className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Contact Information</h3>
                 
@@ -475,7 +484,7 @@ const Index = () => {
                         LinkedIn
                       </a>
                     </Button>
-                    <Button asChild size="sm" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-navy-900">
+                    <Button asChild size="sm" variant="outline" className="border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900">
                       <a href="https://github.com/karthikkemidi" target="_blank" rel="noopener noreferrer">
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
@@ -486,7 +495,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="glass-card">
+            <Card className="bg-slate-800/50 backdrop-blur-lg border-blue-500/20">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Send a Message</h3>
                 
@@ -496,7 +505,7 @@ const Index = () => {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
                       placeholder="Your name"
                     />
                   </div>
@@ -506,7 +515,7 @@ const Index = () => {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -516,7 +525,7 @@ const Index = () => {
                     <textarea
                       id="message"
                       rows={5}
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-blue-500/30 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none"
                       placeholder="Your message..."
                     ></textarea>
                   </div>
@@ -532,7 +541,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-gray-800">
+      <footer className="py-8 border-t border-gray-700 bg-slate-900/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
             © 2024 Karthik Kemidi. Built with passion for technology and innovation.
