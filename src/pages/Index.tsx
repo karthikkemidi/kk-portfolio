@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -89,12 +89,6 @@ const Index = () => {
       title: 'Music Player Web App',
       description: 'Feature-rich music player with custom audio controls and dynamic playlists.',
       tech: ['HTML5', 'CSS3', 'JavaScript'],
-      github: '#'
-    },
-    {
-      title: 'Spotify Clone',
-      description: 'Web application recreation of Spotify with modern UI and functionality.',
-      tech: ['HTML', 'CSS', 'JavaScript'],
       github: 'https://github.com/karthikkemidi/Spotify-Clone'
     },
   ];
@@ -104,19 +98,22 @@ const Index = () => {
       title: 'Winter Intern',
       company: 'Indian Space Lab',
       year: '2025',
-      description: 'Working on space technology and satellite data analysis projects.'
+      description: 'Working on space technology and satellite data analysis projects.',
+      link: 'https://drive.google.com/file/d/1GaN1Ia2vetv6T_SfvXWIOPCwfIuy1UxY/view?usp=sharing'
     },
     {
       title: 'Virtual Intern',
       company: 'Google AI-ML',
       year: '2024',
-      description: 'Gained expertise in artificial intelligence and machine learning technologies.'
+      description: 'Gained expertise in artificial intelligence and machine learning technologies.',
+      link: 'https://drive.google.com/file/d/1FEdn3U8wNvH8uYMXBbI8R9_BuFRl13Q_/view?usp=sharing'
     },
     {
       title: 'Virtual Intern',
       company: 'Salesforce Developer',
       year: '2023',
-      description: 'Developed skills in Salesforce platform and cloud-based solutions.'
+      description: 'Developed skills in Salesforce platform and cloud-based solutions.',
+      link: 'https://drive.google.com/file/d/1N1hsA0-_Bgd4-z2xQ0BhkTQxmo5p40Ht/view?usp=sharing'
     },
   ];
 
@@ -126,6 +123,11 @@ const Index = () => {
     'Problem Solving Through Programming in C (NPTEL)',
     'Web Development (Internshala)',
     'Programming in Java (Infosys Springboard)',
+  ];
+
+  const achievements = [
+    'Champion Milestone in GoogleCloud Arcade (Jul 2024-Dec 2024)',
+    'Chess Winners Shruthi\'25 (Annual College Event)',
   ];
 
   return (
@@ -187,8 +189,12 @@ const Index = () => {
       <section id="home" className="min-h-screen flex items-center justify-center hero-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="floating-element">
-            <div className="w-48 h-48 mx-auto mb-8 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full glow-effect flex items-center justify-center text-6xl font-bold text-navy-900">
-              KK
+            <div className="w-48 h-48 mx-auto mb-8 rounded-full glow-effect overflow-hidden border-4 border-blue-400/30">
+              <img 
+                src="https://i.postimg.cc/6qW72NG3/Screenshot-2023-0205-130522.jpg" 
+                alt="Karthik Kemidi" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           
@@ -199,6 +205,21 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 gradient-text font-medium">
             AI/ML Engineer | Web Developer | Problem Solver
           </p>
+
+          {/* Achievements Section */}
+          <div className="mb-8">
+            <div className="flex justify-center items-center mb-4">
+              <Award className="w-6 h-6 text-cyan-400 mr-2" />
+              <h3 className="text-lg font-semibold text-blue-400">Recent Achievements</h3>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="glass-card px-4 py-2 rounded-full">
+                  <span className="text-sm text-cyan-300">🏆 {achievement}</span>
+                </div>
+              ))}
+            </div>
+          </div>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             I am Karthik Kemidi, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Chaitanya Bharathi Institute of Technology, Hyderabad. I am passionate about building intelligent systems and web applications that solve real-world problems. With hands-on experience in machine learning, web development, and multiple virtual internships, I aim to innovate and contribute to impactful tech solutions.
@@ -367,7 +388,13 @@ const Index = () => {
                       <div className="text-cyan-400 text-sm font-medium mb-2">{exp.year}</div>
                       <h3 className="text-xl font-bold mb-2">{exp.title}</h3>
                       <h4 className="text-blue-400 font-semibold mb-3">{exp.company}</h4>
-                      <p className="text-gray-300 text-sm">{exp.description}</p>
+                      <p className="text-gray-300 text-sm mb-4">{exp.description}</p>
+                      <Button asChild size="sm" variant="outline" className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-navy-900">
+                        <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          View Certificate
+                        </a>
+                      </Button>
                     </CardContent>
                   </Card>
                 </div>
