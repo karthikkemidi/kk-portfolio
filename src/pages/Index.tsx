@@ -156,7 +156,7 @@ const Index = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 typewriter font-poppins">Karthik Kemidi</h1>
+          <h1 className="text-5xl font-bold mb-6 typewriter font-poppins md:text-5xl">Karthik Kemidi</h1>
           
           <p className="text-xl mb-8 gradient-text font-medium md:text-xl">AI/ML Engineer | Software Engineer | Web Developer | Google Cloud Facilitator | Vice President NeuralNexus CBIT | Events Head of Cybersecurity Club of CBIT</p>
 
@@ -173,9 +173,7 @@ const Index = () => {
             </div>
           </div>
           
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-            I am Karthik Kemidi, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Chaitanya Bharathi Institute of Technology, Hyderabad. I am passionate about building intelligent systems and web applications that solve real-world problems. With hands-on experience in machine learning, web development, and multiple virtual internships, I aim to innovate and contribute to impactful tech solutions.
-          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">I am Karthik Kemidi, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at CBIT, Hyderabad. I am passionate about building intelligent systems and web applications that solve real-world problems. With hands-on experience in machine learning, web development, and multiple virtual internships, I aim to innovate and contribute to impactful tech solutions.</p>
           
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild className="bg-blue-600 hover:bg-blue-700 transition-all duration-300 hover:scale-105">
