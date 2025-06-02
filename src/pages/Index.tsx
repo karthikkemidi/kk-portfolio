@@ -150,13 +150,13 @@ const Index = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center hero-gradient">
         <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center py-[24px] sm:px-0">
-          <div className="floating-element py-0 my-[60px]">
+          <div className="floating-element my-[60px] py-0">
             <div className="w-48 h-48 mx-auto mb-8 rounded-full glow-effect overflow-hidden border-4 border-blue-400/30">
               <img src="https://i.postimg.cc/6qW72NG3/Screenshot-2023-0205-130522.jpg" alt="Karthik Kemidi" className="w-full h-full object-cover" />
             </div>
           </div>
           
-          <h1 className="text-5xl font-bold mb-6 typewriter font-poppins md:text-5xl">Karthik Kemidi</h1>
+          <h1 className="text-5xl font-bold mb-6 typewriter font-poppins md:text-6xl">Karthik Kemidi</h1>
           
           <p className="text-xl mb-8 gradient-text font-medium md:text-xl">AI/ML Engineer | Software Engineer | Web Developer | Google Cloud Facilitator | Vice President NeuralNexus CBIT | Events Head of Cybersecurity Club of CBIT</p>
 
