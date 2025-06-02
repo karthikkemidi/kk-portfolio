@@ -149,7 +149,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center hero-gradient">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center py-[24px] sm:px-0">
           <div className="floating-element">
             <div className="w-48 h-48 mx-auto mb-8 rounded-full glow-effect overflow-hidden border-4 border-blue-400/30">
               <img src="https://i.postimg.cc/6qW72NG3/Screenshot-2023-0205-130522.jpg" alt="Karthik Kemidi" className="w-full h-full object-cover" />
@@ -205,7 +205,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20">
+      <section id="about" className="py-20 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">About Me</h2>
           
@@ -244,7 +244,7 @@ const Index = () => {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-navy-950/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[10px]">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Skills</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -369,7 +369,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Get In Touch</h2>
           
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 ">
             <Card className="glass-card bg-zinc-900">
               <CardContent className="p-8 bg-zinc-900">
                 <h3 className="text-2xl font-bold mb-6 text-blue-400">Contact Information</h3>
