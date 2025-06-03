@@ -11,6 +11,7 @@ const Index = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    subject: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -190,7 +191,7 @@ const Index = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
       toast({
         title: "Error",
         description: "Please fill in all fields",
@@ -216,6 +217,7 @@ const Index = () => {
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
+        subject: formData.subject,
         message: formData.message,
         to_name: 'Karthik Kemidi',
       };
@@ -235,6 +237,7 @@ const Index = () => {
       setFormData({
         name: '',
         email: '',
+        subject: '',
         message: ''
       });
 
@@ -678,42 +681,56 @@ const Index = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">Name</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400"
                       placeholder="Your name"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">Email</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400"
                       placeholder="your.email@example.com"
                       required
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                    <label htmlFor="subject" className="block text-sm font-medium mb-2 text-white">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400"
+                      placeholder="Subject of your message"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">Message</label>
                     <textarea
                       id="message"
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
                       rows={5}
-                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none"
+                      className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none text-white placeholder-gray-400"
                       placeholder="Your message..."
                       required
                     ></textarea>
