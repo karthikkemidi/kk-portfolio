@@ -1,8 +1,8 @@
-# Welcome to your Lovable project
+# My Latest Portfolio
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/18066344-f00a-4750-bc12-aa2253969345
+**URL**: [https://lovable.dev/projects/18066344-f00a-4750-bc12-aa2253969345](https://kk-portfolio.lovable.app/)
 
 ## How can I edit this code?
 
