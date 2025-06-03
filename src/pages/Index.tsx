@@ -579,7 +579,7 @@ const Index = () => {
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">Message</label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} rows={5} placeholder="Your message..." required className="w-full px-4 py-3  border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none text-black placeholder-gray-400"></textarea>
+                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} rows={5} placeholder="Your message..." required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none text-black placeholder-gray-400"></textarea>
                   </div>
                   
                   <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
