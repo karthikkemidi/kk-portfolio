@@ -136,12 +136,27 @@ const Index = () => {
   ];
 
   const certifications = [
-    'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
-    'Google Cloud Cybersecurity Certificate',
-    'MongoDB Associate Developer Python',
-    'Salesforce Associate Developer',
-    'Problem Solving Through Programming in C (NPTEL)',
-    'Web Development (Internshala)'
+    {
+      name: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
+      url: 'https://catalog-education.oracle.com/ords/certview/sharebadge?id=B029ED19422276E2D9CF27EA7A8EE2522B5958F24ACD5CE1FDF47D286E2BA74E'
+    },
+    {
+      name: 'Google Cloud Data Analytics Certificate',
+      url: 'https://www.credly.com/badges/d610a690-2d7a-4e5e-90e7-7407f46b704e/linked_in_profile'
+    },
+    {
+      name: 'MongoDB Associate Developer Python',
+      url: 'https://learn.mongodb.com/c/6uPDlZnDS2WitkE4zQUJ0A'
+    },
+    {
+      name: 'Salesforce Associate Developer',
+      url: 'https://drive.google.com/file/d/16CC-8bb2RdM2t-TmSz4dsUsNlsvmpchY/view'
+    },
+    {
+      name: 'Web Development (Internshala)',
+      url: 'https://trainings.internshala.com/verify-certificate/',
+      credentialId: 'bwzip9xy7cs'
+    }
   ];
 
   const achievements = [
@@ -473,22 +488,25 @@ const Index = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-navy-900 font-bold text-xl">✓</span>
                   </div>
-                  <h3 className="font-semibold group-hover:text-blue-400 transition-colors">
-                    {cert}
+                  <h3 className="font-semibold group-hover:text-blue-400 transition-colors mb-3">
+                    {cert.name}
                   </h3>
-                  {cert === 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate' && (
-                    <Button
-                      asChild
-                      size="sm"
-                      variant="outline"
-                      className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-navy-900 mt-3"
-                    >
-                      <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=B029ED19422276E2D9CF27EA7A8EE2522B5958F24ACD5CE1FDF47D286E2BA74E" target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View Certificate
-                      </a>
-                    </Button>
+                  {cert.credentialId && (
+                    <p className="text-sm text-gray-400 mb-3">
+                      Credential ID: {cert.credentialId}
+                    </p>
                   )}
+                  <Button
+                    asChild
+                    size="sm"
+                    variant="outline"
+                    className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-navy-900"
+                  >
+                    <a href={cert.url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      View Certificate
+                    </a>
+                  </Button>
                 </CardContent>
               </Card>
             ))}
