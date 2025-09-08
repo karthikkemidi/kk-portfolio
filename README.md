@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: [portfolio](https://kk-portfolio.lovable.app/)
+**URL**: [portfolio](https://kk-portfolio.netlify.app/)
 
 ## How can I edit this code?
 
