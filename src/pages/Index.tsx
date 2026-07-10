@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X, Award } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X, Award, Cloud } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
