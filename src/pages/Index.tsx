@@ -277,12 +277,12 @@ const Index = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 typewriter">
-            Karthik Kemidi
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+            <span className="typewriter gradient-text">Karthik Kemidi</span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 gradient-text font-medium">
-            AI/ML Engineer | Software Engineer | Web Developer | Google Cloud Facilitator | Vice President Neural Nexus CBIT | Events Head of Cybersecurity Club CBIT
+          <p className="text-base sm:text-xl md:text-2xl mb-8 gradient-text font-medium px-2">
+            AI/ML Engineer | Software Engineer | Web Developer | Google Cloud Facilitator | VP Neural Nexus CBIT | Events Head Cybersecurity Club CBIT
           </p>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
@@ -585,22 +585,22 @@ const Index = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">Name</label>
-                    <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your name" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-black placeholder-gray-400" />
+                    <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} placeholder="Your name" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400" />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">Email</label>
-                    <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="your.email@example.com" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-black placeholder-gray-400" />
+                    <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="your.email@example.com" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400" />
                   </div>
                   
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-2 text-white">Subject</label>
-                    <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Subject of your message" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-black placeholder-gray-400" />
+                    <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleInputChange} placeholder="Subject of your message" required className="w-full px-4 py-3 bg-navy-800/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors text-white placeholder-gray-400" />
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">Message</label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} rows={5} placeholder="Your message..." required className="w-full px-4 py-3 bg-navy-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none text-black placeholder-gray-400"></textarea>
+                    <textarea id="message" name="message" value={formData.message} onChange={handleInputChange} rows={5} placeholder="Your message..." required className="w-full px-4 py-3 bg-navy-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-400 focus:border-transparent outline-none transition-colors resize-none text-white placeholder-gray-400"></textarea>
                   </div>
                   
                   <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
