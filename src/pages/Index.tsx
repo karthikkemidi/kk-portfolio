@@ -321,11 +321,7 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 gradient-text">About Me</h2>
-
-          <p className="text-lg md:text-xl text-gray-300 text-center max-w-4xl mx-auto mb-12 leading-relaxed">
-            I am <span className="text-blue-400 font-semibold">Karthik Kemidi</span>, a Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at CBIT, Hyderabad. I am passionate about building intelligent systems and web applications that solve real-world problems. With hands-on experience in machine learning, web development, and multiple virtual internships, I aim to innovate and contribute to impactful tech solutions.
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">About Me</h2>
 
           <div className="grid md:grid-cols-2 gap-12">
             <Card className="bg-navy-800/50 border-blue-400/30">
