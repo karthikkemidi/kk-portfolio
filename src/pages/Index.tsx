@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X, Award } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Brain, Palette, Download, Menu, X, Award, Cloud } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -65,29 +65,29 @@ const Index = () => {
   }];
   const skills = [{
     category: 'Programming',
-    items: ['Python', 'Java', 'C']
+    items: ['Python', 'Java', 'C', 'JavaScript', 'SQL']
   }, {
-    category: 'Web & Database',
-    items: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'SQL']
+    category: 'AI / ML',
+    items: ['PyTorch', 'TensorFlow', 'scikit-learn', 'Deep Learning', 'NLP', 'Computer Vision']
   }, {
-    category: 'Developer Tools',
-    items: ['VS Code', 'Git', 'GitHub', 'Spring Boot', 'Streamlit', 'Flask']
+    category: 'Web & Backend',
+    items: ['React', 'Node.js', 'Spring Boot', 'Flask', 'Streamlit', 'REST APIs', 'MongoDB', 'MySQL']
   }, {
-    category: 'Cloud & Specialties',
-    items: ['Google Cloud (GCP)', 'AI/ML', 'Deep Learning', 'Web Development']
+    category: 'Cloud & DevOps',
+    items: ['Google Cloud (GCP)', 'Oracle Cloud (OCI)', 'Git', 'GitHub', 'Jenkins', 'VS Code']
   }];
   const services = [{
     icon: <Brain className="w-8 h-8" />,
-    title: 'Machine Learning Engineering',
-    description: 'Custom ML models, deep learning systems, and data analysis solutions for complex real-world problems.'
+    title: 'AI / ML Engineering',
+    description: 'Designing and deploying machine learning and deep learning systems — from data pipelines and model training to production-ready APIs for classification, NLP, and predictive analytics.'
   }, {
     icon: <Code className="w-8 h-8" />,
-    title: 'Web Development',
-    description: 'Responsive websites and full-stack web applications built with modern technologies.'
+    title: 'Full-Stack Web Development',
+    description: 'Building responsive, scalable web applications with React, Node.js, and Spring Boot, backed by SQL/NoSQL databases and cloud-native deployments.'
   }, {
-    icon: <Palette className="w-8 h-8" />,
-    title: 'Poster Design',
-    description: 'Creative visual designs for events, marketing, and brand communications.'
+    icon: <Cloud className="w-8 h-8" />,
+    title: 'Cloud & Backend Engineering',
+    description: 'Developing and integrating backend services on Google Cloud and Oracle Cloud with a focus on reliability, CI/CD (Jenkins), and secure API design.'
   }];
   const projects = [{
     title: 'Human & Animal Audio Emotion Recognition',
