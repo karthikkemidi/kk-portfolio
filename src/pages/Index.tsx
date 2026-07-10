@@ -282,7 +282,7 @@ const Index = () => {
           </h1>
           
           <p className="text-base sm:text-xl md:text-2xl mb-8 gradient-text font-medium px-2">
-            AI/ML Engineer | Software Engineer | Web Developer | Google Cloud Facilitator | VP Neural Nexus CBIT | Events Head Cybersecurity Club CBIT
+            AI/ML Engineer • Software Engineer • Web Developer
           </p>
           
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
