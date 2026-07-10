@@ -65,31 +65,41 @@ const Index = () => {
   }];
   const skills = [{
     category: 'Programming',
-    items: ['Python', 'C', 'Java', 'R']
+    items: ['Python', 'Java', 'C']
   }, {
     category: 'Web & Database',
     items: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'SQL']
   }, {
-    category: 'Tools',
-    items: ['VS Code', 'Git', 'Canva', 'MATLAB', 'RStudio']
+    category: 'Developer Tools',
+    items: ['VS Code', 'Git', 'GitHub', 'Spring Boot', 'Streamlit', 'Flask']
   }, {
-    category: 'Specialties',
-    items: ['AI/ML', 'Web Development', 'Poster Design', 'Team Leadership']
+    category: 'Cloud & Specialties',
+    items: ['Google Cloud (GCP)', 'AI/ML', 'Deep Learning', 'Web Development']
   }];
   const services = [{
     icon: <Brain className="w-8 h-8" />,
     title: 'Machine Learning Engineering',
-    description: 'Custom ML models and data analysis solutions for complex business problems.'
+    description: 'Custom ML models, deep learning systems, and data analysis solutions for complex real-world problems.'
   }, {
     icon: <Code className="w-8 h-8" />,
     title: 'Web Development',
-    description: 'Responsive websites and web applications built with modern technologies.'
+    description: 'Responsive websites and full-stack web applications built with modern technologies.'
   }, {
     icon: <Palette className="w-8 h-8" />,
     title: 'Poster Design',
     description: 'Creative visual designs for events, marketing, and brand communications.'
   }];
   const projects = [{
+    title: 'Human & Animal Audio Emotion Recognition',
+    description: 'End-to-end ML application classifying audio sources (human/animal) and predicting emotions using ensemble Random Forest models with MFCC, Chroma, and Spectral Contrast features. Deployed with Flask API and Streamlit UI.',
+    tech: ['Flask', 'Streamlit', 'scikit-learn', 'librosa', 'Random Forest'],
+    github: 'https://github.com/karthikkemidi/SpeechEmotionRecognition'
+  }, {
+    title: 'HTBR Framework for Portfolio Optimization',
+    description: 'Hierarchical DRL system achieving 29.22% return and 1.666 Sharpe ratio on multi-asset portfolios. Outperformed traditional strategies by 8.2%+ using per-asset attention mechanisms on 10 years of financial data.',
+    tech: ['Python', 'PyTorch', 'XGBoost', 'FinBERT', 'PPO'],
+    github: 'https://github.com/karthikkemidi/The-HTBR-Framework-for-Portfolio-Optimization'
+  }, {
     title: 'Loan Approval Prediction ML',
     description: 'Machine learning model using Python, pandas, scikit-learn with multiple algorithms including KNN, Random Forest, SVM, and Logistic Regression.',
     tech: ['Python', 'scikit-learn', 'pandas', 'ML'],
@@ -111,16 +121,22 @@ const Index = () => {
     github: 'https://github.com/karthikkemidi/Spotify-Clone'
   }];
   const experience = [{
+    title: 'FedEx ACC Intern',
+    company: 'FedEx',
+    year: 'Apr 2026 - Jul 2026',
+    description: 'Developed a resilient Spring Boot backend to centralize FedEx pickup data retrieval via unified REST APIs. Engineered a Node.js-based incident intelligence platform integrating automated log analysis, historical RCA, and Jenkins-orchestrated remediation to reduce incident MTTR.',
+    link: '#'
+  }, {
     title: 'Google Cloud Facilitator',
     company: 'Google Cloud',
-    year: 'Apr 2025 - Present',
-    description: 'Leading cloud technology workshops and facilitating Google Cloud training programs.',
+    year: 'Jan 2025 - Jun 2025',
+    description: 'Led cloud technology workshops and facilitated Google Cloud training programs for peers.',
     link: '#'
   }, {
     title: 'Winter Intern',
     company: 'Indian Space Lab',
     year: '2025',
-    description: 'Working on space technology and satellite data analysis projects.',
+    description: 'Worked on space technology and satellite data analysis projects.',
     link: 'https://drive.google.com/file/d/1GaN1Ia2vetv6T_SfvXWIOPCwfIuy1UxY/view?usp=sharing'
   }, {
     title: 'Virtual Intern',
@@ -152,7 +168,7 @@ const Index = () => {
     url: 'https://trainings.internshala.com/verify-certificate/',
     credentialId: 'bwzip9xy7cs'
   }];
-  const achievements = ['Champion Milestone in GoogleCloud Arcade (Jul 2024-Dec 2024)', 'Chess Winners Shruthi\'25 (Annual College Event)'];
+  const achievements = ['Google Cloud Facilitator (Jan 2025 – Jun 2025)', 'Champion Milestone in Google Cloud Arcade (Jul 2024 – Dec 2024)', 'Chess Winner - Shruthi\'25 (Annual College Event)'];
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -315,12 +331,17 @@ const Index = () => {
                   <div>
                     <h4 className="text-xl font-semibold">B.E. CSE-AIML</h4>
                     <p className="text-gray-300">Chaitanya Bharathi Institute of Technology, Hyderabad</p>
-                    <p className="text-cyan-400">2022-2026 | CGPA: 9.16/10.0</p>
+                    <p className="text-cyan-400">Jul 2022 - May 2026 | CGPA: 9.25/10.0</p>
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold">Intermediate</h4>
-                    <p className="text-gray-300">Narayana Junior College</p>
-                    <p className="text-cyan-400">2020-2022 | 98.1%</p>
+                    <h4 className="text-xl font-semibold">Intermediate (MPC)</h4>
+                    <p className="text-gray-300">Narayana Junior College, Adibatla</p>
+                    <p className="text-cyan-400">Jul 2020 - May 2022 | 98.1%</p>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold">SSC</h4>
+                    <p className="text-gray-300">St. Mary's High School, Jangaon</p>
+                    <p className="text-cyan-400">2020 | CGPA: 10.0/10.0</p>
                   </div>
                 </div>
               </CardContent>
@@ -596,7 +617,7 @@ const Index = () => {
       <footer className="py-8 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
-            © 2024 Karthik Kemidi. Built with passion for technology and innovation.
+            © 2026 Karthik Kemidi. Built with passion for technology and innovation.
           </p>
         </div>
       </footer>
